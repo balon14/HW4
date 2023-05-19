@@ -1,10 +1,8 @@
-from fastapi.testclient import TestClient
-from main import app
+def test_punctuated():
+    assert text_punctuated("Дмитрий") == \
+        "Дмитрий"
 
-client = TestClient(app)
 
-
-def test_read_main():
-    response = client.get("/")
-    assert response.status_code == 200
-    assert response.json() == {"message": "Hello World"}
+def test_lang_detection():
+    assert lang_detection("12332") == \
+        "имя должно состоять из букв"

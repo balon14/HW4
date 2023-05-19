@@ -9,13 +9,8 @@ import re
 st.title("Object detection YOLOS model Web App")
 
 # Получение имени пользователя и вывод приветствия
-i=False
-while not i:
-    name = input('Введите имя ')
-    if re.findall(r'\d', name)==[]:
-        i=True
-        print(f'Привет {name}')
-    else: print("Данные введены неверно, попробуйте еще раз")
+name = st.text_input("Введите ваше имя", '')
+st.write(f"Привет {name}!")
 
 
 url = 'http://images.cocodataset.org/val2017/000000039769.jpg'

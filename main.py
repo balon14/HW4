@@ -1,3 +1,4 @@
+# Импорт библиотек
 from transformers import YolosFeatureExtractor, YolosForObjectDetection
 from PIL import Image
 import requests
